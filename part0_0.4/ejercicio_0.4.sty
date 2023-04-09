@@ -1,0 +1,25 @@
+title EJERCICIO 0.4 nueva nota
+
+note right of browser: estando en http
+note right of browser: boton submit
+browser->server: HTTP POST: https://studies.cs.helsinki.fi/exampleapp/new_note
+server->browser: respuesta del formulario txt/html
+browser->server: HTTP GET: https://studies.cs.helsinki.fi/exampleapp/notes
+server->browser: html-code
+note right of browser: render html
+browser->server: HTTP GET: https://studies.cs.helsinki.fi/exampleapp/main.css
+server->browser: main-css
+browser->server: HTTP GET: https://studies.cs.helsinki.fi/exampleapp/main.js
+server->browser: main-js
+note right of browser: se ejecuta js-code
+note right of browser: solicita datos json
+browser->server: HTTP GET: https://studies.cs.helsinki.fi/exampleapp/data.json
+note right of server: envia datos json
+server->browser: [{"content":"...","date":"..."}, {"content":"LA PLATA es Pincha7","date":"2023-04-06T21:25:56.518Z"}]
+note right of browser: json render en pantalla
+browser->server: HTTP GET: https://studies.cs.helsinki.fi/favicon.ico
+server->browser: libreria favicon
+
+
+LINK to https://www.websequencediagrams.com/#
+https://www.websequencediagrams.com/cgi-bin/cdraw?lz=dGl0bGUgRUpFUkNJQ0lPIDAuNCBudWV2YSBub3RhCgpub3RlIHJpZ2h0IG9mIGJyb3dzZXI6IGVzdGFuZG8gZW4gaHR0cAAPGGJvdG9uIHN1Ym1pdAoANgctPnNlcnZlcjogSFRUUCBQT1NUOgBABXM6Ly9zdHVkaWVzLmNzLmhlbHNpbmtpLmZpL2V4YW1wbGVhcHAvbmV3X25vdGUKAEAGLT4AgQsJcmVzcHVlc3RhIGRlbCBmb3JtdWxhcmlvIHR4dC9odG1sAGsXR0UAUy5vdGVzAGwSaHRtbC1jb2RlAIIbGHJlbmRlcgAjBQBDRm1haW4uY3MAeRNtYWluLWNzcwAdS2oATxhqcwCEDBhzZSBlamVjdXRhIGpzAIF-HXNvbGljaXRhIGRhdG9zIGpzb24AgmZGZGF0YS4ASgUAhToOAIR6CGVudmkAaQ0AhEQRW3siY29udGVudCI6Ii4uLiIsImRhdGUABgd9LCAAFAxMQSBQTEFUQSBlcyBQaW5jaGE3ACYKMjAyMy0wNC0wNlQyMToyNTo1Ni41MThaIn1dAIZOGGpzb24AhDAIZW4gcGFudGFsbGEAhQ07ZmF2aWNvbi5pY28Ahi8SbGlicmVyaWEgAB8HCgo&s=default
