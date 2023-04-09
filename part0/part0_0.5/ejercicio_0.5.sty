@@ -1,0 +1,20 @@
+title EJERCICIO 0.5 spa
+
+note right of browser: acceder a la spa
+browser->server: HTTP GET: https://studies.cs.helsinki.fi/exampleapp/spa
+server->browser: respuesta del formulario txt/html, app
+note right of browser: render html, carga app
+browser->server: HTTP GET: https://studies.cs.helsinki.fi/exampleapp/main.css
+server->browser: main-css
+browser->server: HTTP GET: https://studies.cs.helsinki.fi/exampleapp/spa.js
+server->browser: spa-js
+note right of browser: se ejecuta spa.js
+note right of browser: solicita datos json 
+browser->server: HTTP GET: https://studies.cs.helsinki.fi/exampleapp/data.json
+note right of server: envia datos json
+server->browser: [{content...,"date":"..."},]
+note right of browser: render json en pantalla
+
+
+LINK to https://www.websequencediagrams.com/#
+https://www.websequencediagrams.com/cgi-bin/cdraw?lz=dGl0bGUgRUpFUkNJQ0lPIDAuNSBzcGEKCm5vdGUgcmlnaHQgb2YgYnJvd3NlcjogYWNjZWRlciBhIGxhACQFABMHLT5zZXJ2ZXI6IEhUVFAgR0VUOiBodHRwczovL3N0dWRpZXMuY3MuaGVsc2lua2kuZmkvZXhhbXBsZWFwcC9zcGEKADoGLT4AYglyZXNwdWVzdGEgZGVsIGZvcm11bGFyaW8gdHh0L2h0bWwsIGFwcACBERhyZW5kZXIgACIGY2FyZ2EAKQUAakVtYWluLmNzcwCBIhJtYWluLWNzcwCBTkkuagBTE3NwYS1qcwCDCxhzZSBlamVjdXQAgxwFLgAOG29saWNpdGEgZGF0b3MganNvbiAAgwpGZGF0YS5qc29uAIQ4DwCEHAhlbnZpAGsMAINrElt7Y29udGVudC4uLiwiZGF0ZSI6Ii4uLiJ9LF0Ag1QfAIFDBWVuIHBhbnRhbGxhCg&s=default
